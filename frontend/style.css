@@ -1,5 +1,5 @@
 body {
-    background-color: #1c242d;
+    background-color: #121a1f;
     color: #fff;
     font-family: sans-serif;
     margin: 0 2%;
@@ -76,7 +76,7 @@ nav ul li {
 }
 .left{
     align-items: left;
-    border: 1px solid #1F2933;
+    
     border-radius: 20px;
     font-size: 12px;
     width: 20%;
@@ -224,6 +224,7 @@ nav ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding:10px 0;
 }
 .iconcircle{
     border-radius: 100%;
@@ -238,12 +239,14 @@ color: rgb(108, 255, 3);
 }
 .content1-1-iconset p{
     color:#ababab;
+    font-size: 12px;
 }
 .content1-1-iconset-text{
     display: flex;
     flex-direction: row;
     color:#ababab;
     align-items: center;
+    font-size: 12px;
 }
 .content1-1-iconset-text p{
     margin: 0 5px;
@@ -264,4 +267,45 @@ color: rgb(108, 255, 3);
 .iconfooter span{
     font-size: 15px;
     padding: 0 10px;
+}
+.content1-image{
+    width: 100%;
+    border-radius: 20px;
+}
+.right{
+    border-radius: 20px;
+    font-size: 12px;
+    width: 25%;
+}
+.section4{
+    background-color: #202b36;
+    border: 1px solid #1b222a;
+    border-radius: 20px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.section4-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.gear{
+    font-size: 20px;
+}
+.section4-content1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2c3641;
+}
+.section4-content p{
+    color: #ababab;
+}
+.section4 h4{
+    
+    color: rgb(0, 170, 255);
 }
