@@ -51,6 +51,10 @@ nav ul li {
     font-size: 20px;
 }
 
+nav .navcontent2 li > i {
+color:white;
+}
+
 .nav-profile {
     border: 1px solid #1F2933;
     font-size: 15px;
