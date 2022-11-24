@@ -1,5 +1,4 @@
 <?PHP
 
-//Homepage goes here
-
+header("location: frontend/");
 ?>
