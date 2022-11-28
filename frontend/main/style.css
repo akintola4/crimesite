@@ -70,6 +70,24 @@ color:white;
     color: rgb(204, 204, 204);
 }
 
+#preview{
+    position: fixed;
+    display: none;
+
+    flex-direction: column;
+    margin-top: 10%;
+    align-items: center;
+    
+}
+.preview-close{
+    align-items: right;
+    right: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+.preview-picture{
+    width: 50%;
+}
 .container {
     display: flex;
     justify-content: center;
