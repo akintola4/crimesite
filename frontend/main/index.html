@@ -17,7 +17,7 @@
         <img class="mobile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" alt="">
         <nav>
             <ul class="nav-content2">
-                <li><i class="fa-solid fa-bars"></i></li>
+                <li><i onclick="closeSidebar()" class="fa-solid fa-bars"></i></li>
             </ul>
         </nav>
     </div>
@@ -220,10 +220,10 @@
 
         </div>
     </div>
-    <div class="mobile-sidebar">
+    <div id="mobile-sidebar" class="mobile-sidebar">
         <div class="sidebar-topper">
             <h4>Acounnt info</h4>
-            <i class="fa-solid fa-xmark"></i>
+            <i onclick="closeSidebar()" id="sidebar-close" class="fa-solid  fa-xmark"></i>
         </div>
         <div class="sidebar-profile">
             <img class="sidebar-profile-pic" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px" alt="">
@@ -249,4 +249,5 @@
     </div>
 </body>
 <script src="/frontend/main/preview.js"></script>
+<script src="/frontend/main/sidebar.js"></script>
 </html>

@@ -406,7 +406,7 @@ color:white;
     display: none;
 }
 
-.mobile-sidebar {
+#mobile-sidebar {
     display: none;
 }
 
@@ -491,8 +491,8 @@ color:white;
         font-size: 12px;
     }
 
-    .mobile-sidebar {
-        display: flex;
+    #mobile-sidebar {
+        display: none;
         flex-direction: column;
         position: fixed;
         top: 0%;
@@ -539,8 +539,7 @@ color:white;
         color: #fff;
         text-decoration: none;
     }
-
-    .mobile-sidebar ul li {
+    #mobile-sidebar ul li {
         font-size: 20px;
         list-style: none;
         padding: 10% 0;
