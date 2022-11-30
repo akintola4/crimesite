@@ -227,7 +227,8 @@ nav .navcontent2 li>i {
 
 .nav-3 h4:hover {
     background-color: #ababab;
-
+    opacity: 0.4;
+    
 }
 
 .content1 {
