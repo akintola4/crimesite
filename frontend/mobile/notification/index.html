@@ -25,9 +25,9 @@
         </div>
          
         <div class="nav-3">
-            <h4>All</h4>
-            <h4>Verified</h4>
-            <h4>Mention</h4>
+            <h4 onclick="notificationChange()" >All</h4>
+            <h4 onclick="verifiedChange()">Verified</h4>
+            <h4 onclick="mentionChange()" >Mention</h4>
         </div>
     </div>
     <div id="preview">
@@ -49,9 +49,9 @@
                 <i class="fa-solid fa-gear"></i>
             </div>
             <div class="nav-3">
-                <h4>All</h4>
-                <h4>Verified</h4>
-                <h4>Mention</h4>
+                <h4 onclick="notificationChange()" >All</h4>
+            <h4 onclick="verifiedChange()">Verified</h4>
+            <h4 onclick="mentionChange()" >Mention</h4>
             </div>
 
         </div>
@@ -121,320 +121,178 @@
             </section>
         </div>
         <div class="center">
-
-            <div class="main">
-                <div class="content1">
-                    <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
-                        height="40px" alt="">
-                    <div class="content1-main">
-                        <div class="time">
-                            <div class="content1-1">
-                                <div class="content1-1-text">
-                                    <h4>Akintola Tope</h4>
-                                    <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
-                                        focusable="false" data-prefix="fas" data-icon="certificate" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+            <div id="all">
+                <div class="main">
+                    <div class="content1">
+                        <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
+                            height="40px" alt="">
+                        <div class="content1-main">
+                            <div class="time">
+                                <div class="content1-1">
+                                    <div class="content1-1-text">
+                                        <h4>Akintola Tope</h4>
+                                        <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="certificate" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
+                                            </path>
+                                        </svg>
+                                        <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
+                                        <p>@akintola</p>
+                                    </div>
+                                    <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512" data-fa-i2svg="">
                                         <path fill="currentColor"
-                                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
+                                            d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
                                         </path>
-                                    </svg>
-                                    <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
-                                    <p>@akintola</p>
+                                    </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
                                 </div>
-                                <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
+                                <p>2 hours ago</p>
                             </div>
-                            <p>2 hours ago</p>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
+                                dignissimos repudiandae, fugit, aperiam delectus</h4>
                         </div>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
-                            dignissimos repudiandae, fugit, aperiam delectus</h4>
+    
                     </div>
-
+                </div>
+                <div class="main">
+                    <div class="content1">
+                        <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
+                            height="40px" alt="">
+                        <div class="content1-main">
+                            <div class="time">
+                                <div class="content1-1">
+                                    <div class="content1-1-text">
+                                        <h4>Akintola Tope</h4>
+                                        <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="certificate" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
+                                            </path>
+                                        </svg>
+                                        <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
+                                        <p>@akintola</p>
+                                    </div>
+                                    <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                            d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
+                                        </path>
+                                    </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
+                                </div>
+                                <p>2 hours ago</p>
+                            </div>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
+                                dignissimos repudiandae, fugit, aperiam delectus</h4>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="content1">
+                        <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
+                            height="40px" alt="">
+                        <div class="content1-main">
+                            <div class="time">
+                                <div class="content1-1">
+                                    <div class="content1-1-text">
+                                        <h4>Akintola Tope</h4>
+                                        <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="certificate" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
+                                            </path>
+                                        </svg>
+                                        <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
+                                        <p>@akintola</p>
+                                    </div>
+                                    <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                            d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
+                                        </path>
+                                    </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
+                                </div>
+                                <p>2 hours ago</p>
+                            </div>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
+                                dignissimos repudiandae, fugit, aperiam delectus</h4>
+                        </div>
+    
+                    </div>
                 </div>
             </div>
-            <div class="main">
-                <div class="content1">
-                    <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
-                        height="40px" alt="">
-                    <div class="content1-main">
-                        <div class="time">
-                            <div class="content1-1">
-                                <div class="content1-1-text">
-                                    <h4>Akintola Tope</h4>
-                                    <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
-                                        focusable="false" data-prefix="fas" data-icon="certificate" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                                        <path fill="currentColor"
-                                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
-                                        </path>
-                                    </svg>
-                                    <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
-                                    <p>@akintola</p>
-                                </div>
-                                <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
+            <div id="verified">
+                <div class="main">
+                    <div class="content1">
+                        <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
+                            height="40px" alt="">
+                        <div class="content1-main">
+                            <div class="time">
+                                <div class="content1-1">
+                                    <div class="content1-1-text">
+                                        <h4>Akintola Tope</h4>
+                                        <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="certificate" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
+                                            </path>
+                                        </svg>
+                                        <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
+                                        <p>@akintola</p>
+                                    </div>
+                                        </div>
+                                <p>2 hours ago</p>
                             </div>
-                            <p>2 hours ago</p>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
+                                dignissimos repudiandae, fugit, aperiam delectus</h4>
                         </div>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
-                            dignissimos repudiandae, fugit, aperiam delectus</h4>
+    
                     </div>
-
                 </div>
             </div>
-            <div class="main">
-                <div class="content1">
-                    <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
-                        height="40px" alt="">
-                    <div class="content1-main">
-                        <div class="time">
-                            <div class="content1-1">
-                                <div class="content1-1-text">
-                                    <h4>Akintola Tope</h4>
-                                    <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
-                                        focusable="false" data-prefix="fas" data-icon="certificate" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+            <div id="mention">
+                <div class="main">
+                    <div class="content1">
+                        <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
+                            height="40px" alt="">
+                        <div class="content1-main">
+                            <div class="time">
+                                <div class="content1-1">
+                                    <div class="content1-1-text">
+                                        <h4>Tester</h4>
+                                        <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="certificate" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
+                                            </path>
+                                        </svg>
+                                        <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
+                                        <p>@tester</p>
+                                    </div>
+                                    <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512" data-fa-i2svg="">
                                         <path fill="currentColor"
-                                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
+                                            d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
                                         </path>
-                                    </svg>
-                                    <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
-                                    <p>@akintola</p>
+                                    </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
                                 </div>
-                                <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
+                                <p>2 hours ago</p>
                             </div>
-                            <p>2 hours ago</p>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
+                                dignissimos repudiandae, fugit, aperiam delectus</h4>
                         </div>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
-                            dignissimos repudiandae, fugit, aperiam delectus</h4>
+    
                     </div>
-
-                </div>
-            </div>
-            <div class="main">
-                <div class="content1">
-                    <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
-                        height="40px" alt="">
-                    <div class="content1-main">
-                        <div class="time">
-                            <div class="content1-1">
-                                <div class="content1-1-text">
-                                    <h4>Akintola Tope</h4>
-                                    <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
-                                        focusable="false" data-prefix="fas" data-icon="certificate" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                                        <path fill="currentColor"
-                                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
-                                        </path>
-                                    </svg>
-                                    <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
-                                    <p>@akintola</p>
-                                </div>
-                                <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
-                            </div>
-                            <p>2 hours ago</p>
-                        </div>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
-                            dignissimos repudiandae, fugit, aperiam delectus</h4>
-                    </div>
-
-                </div>
-            </div>
-            <div class="main">
-                <div class="content1">
-                    <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
-                        height="40px" alt="">
-                    <div class="content1-main">
-                        <div class="time">
-                            <div class="content1-1">
-                                <div class="content1-1-text">
-                                    <h4>Akintola Tope</h4>
-                                    <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
-                                        focusable="false" data-prefix="fas" data-icon="certificate" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                                        <path fill="currentColor"
-                                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
-                                        </path>
-                                    </svg>
-                                    <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
-                                    <p>@akintola</p>
-                                </div>
-                                <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
-                            </div>
-                            <p>2 hours ago</p>
-                        </div>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
-                            dignissimos repudiandae, fugit, aperiam delectus</h4>
-                    </div>
-
-                </div>
-            </div>
-            <div class="main">
-                <div class="content1">
-                    <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
-                        height="40px" alt="">
-                    <div class="content1-main">
-                        <div class="time">
-                            <div class="content1-1">
-                                <div class="content1-1-text">
-                                    <h4>Akintola Tope</h4>
-                                    <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
-                                        focusable="false" data-prefix="fas" data-icon="certificate" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                                        <path fill="currentColor"
-                                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
-                                        </path>
-                                    </svg>
-                                    <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
-                                    <p>@akintola</p>
-                                </div>
-                                <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
-                            </div>
-                            <p>2 hours ago</p>
-                        </div>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
-                            dignissimos repudiandae, fugit, aperiam delectus</h4>
-                    </div>
-
-                </div>
-            </div>
-            <div class="main">
-                <div class="content1">
-                    <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
-                        height="40px" alt="">
-                    <div class="content1-main">
-                        <div class="time">
-                            <div class="content1-1">
-                                <div class="content1-1-text">
-                                    <h4>Akintola Tope</h4>
-                                    <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
-                                        focusable="false" data-prefix="fas" data-icon="certificate" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                                        <path fill="currentColor"
-                                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
-                                        </path>
-                                    </svg>
-                                    <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
-                                    <p>@akintola</p>
-                                </div>
-                                <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
-                            </div>
-                            <p>2 hours ago</p>
-                        </div>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
-                            dignissimos repudiandae, fugit, aperiam delectus</h4>
-                    </div>
-
-                </div>
-            </div>
-            <div class="main">
-                <div class="content1">
-                    <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
-                        height="40px" alt="">
-                    <div class="content1-main">
-                        <div class="time">
-                            <div class="content1-1">
-                                <div class="content1-1-text">
-                                    <h4>Akintola Tope</h4>
-                                    <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
-                                        focusable="false" data-prefix="fas" data-icon="certificate" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                                        <path fill="currentColor"
-                                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
-                                        </path>
-                                    </svg>
-                                    <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
-                                    <p>@akintola</p>
-                                </div>
-                                <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
-                            </div>
-                            <p>2 hours ago</p>
-                        </div>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
-                            dignissimos repudiandae, fugit, aperiam delectus</h4>
-                    </div>
-
-                </div>
-            </div>
-            <div class="main">
-                <div class="content1">
-                    <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
-                        height="40px" alt="">
-                    <div class="content1-main">
-                        <div class="time">
-                            <div class="content1-1">
-                                <div class="content1-1-text">
-                                    <h4>Akintola Tope</h4>
-                                    <svg class="svg-inline--fa fa-certificate check" aria-hidden="true"
-                                        focusable="false" data-prefix="fas" data-icon="certificate" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                                        <path fill="currentColor"
-                                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z">
-                                        </path>
-                                    </svg>
-                                    <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
-                                    <p>@akintola</p>
-                                </div>
-                                <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-ellipsis"></i> Font Awesome fontawesome.com -->
-                            </div>
-                            <p>2 hours ago</p>
-                        </div>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
-                            dignissimos repudiandae, fugit, aperiam delectus</h4>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -496,5 +354,5 @@
 </body>
 <script src="/frontend/main/preview.js"></script>
 <script src="/frontend/main/sidebar.js"></script>
-
+<script src="/frontend/mobile/notification/nav.js"></script>
 </html>

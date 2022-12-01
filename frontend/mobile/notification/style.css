@@ -171,6 +171,7 @@ nav .navcontent2 li>i {
     width: 50%;
     display: flex;
     margin: 0 2%;
+    margin-top: 3%;
     flex-direction: column;
     cursor: pointer;
 }
@@ -339,7 +340,15 @@ nav .navcontent2 li>i {
     padding: 2% 0;
 }
 
-
+#all{
+display: block;
+}
+#verified{
+    display: none;
+}
+#mention{
+    display: none;
+}
 .right {
     border-radius: 20px;
     position: fixed;
