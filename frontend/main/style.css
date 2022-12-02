@@ -50,7 +50,9 @@ nav ul li {
     display: inline-block;
     font-size: 20px;
 }
-
+a{
+    color: white;
+}
 nav .navcontent2 li > i {
 color:white;
 }
@@ -79,6 +81,7 @@ color:white;
     align-items: center;
     
 }
+
 .preview-close{
     align-items: right;
     right: 0;
@@ -501,7 +504,7 @@ color:white;
         flex-direction: column;
         position: fixed;
         top: 0%;
-        
+        left: 0%;
         width: 50%;
         height: 100%;
         padding: 2%;
