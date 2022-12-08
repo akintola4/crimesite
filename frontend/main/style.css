@@ -416,11 +416,11 @@ color:white;
 @media (max-width:900px) {
     .navmobile {
         display: flex;
-        background-color: #1b222a;
+        background-color: #121a1f;
         position: fixed;
         margin: 0%;
         flex-direction: row;
-        padding: 5% 2%;
+        padding: 3% 2%;
         align-items: center;
     }
 
