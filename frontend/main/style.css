@@ -19,7 +19,9 @@ body {
     background-color: #121a1f;
     padding-bottom: 2%;
 }
-
+:focus {
+    outline: none !important;
+}
 
 .logo {
     width: 3%;
