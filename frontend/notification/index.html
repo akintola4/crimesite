@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/143f4c7aad.js" crossorigin="anonymous"></script>
-
-   
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -16,17 +15,20 @@
         <div class="nav-test">
             <div class="notification">
                 <div class="name-nav">
-                    <i class="fa-solid fa-arrow-left"></i>
+                    <h3>Notifications</h3>
                 </div>
-            </div>
-            <div class="main-nav">
-                <input class="search" type="text" name="" placeholder=" # Search" id="">
             </div>
             <nav class="nav-side">
                 <ul class="nav-content2">
                     <li><i onclick="closeSidebar()" class="fa-solid fa-gear"></i></li>
                 </ul>
             </nav>
+        </div>
+
+        <div class="nav-3">
+            <h4 onclick="notificationChange()">All</h4>
+            <h4 onclick="verifiedChange()">Verified</h4>
+            <h4 onclick="mentionChange()">Mention</h4>
         </div>
     </div>
     <div id="preview">
@@ -44,15 +46,15 @@
         </div>
         <div class="notification">
             <div class="name-nav">
-                <i class="fa-solid fa-arrow-left"></i>
+                <h4>Notifications</h4>
+                <i class="fa-solid fa-gear"></i>
             </div>
-            <div class="main-nav">
-                <input class="search" type="text" name="" placeholder=" # Search" id="">
+            <div class="nav-3">
+                <h4 onclick="notificationChange()">All</h4>
+                <h4 onclick="verifiedChange()">Verified</h4>
+                <h4 onclick="mentionChange()">Mention</h4>
             </div>
-            <div class="name-nav">
-                <i onclick="closeSidebar()" class="fa-solid fa-gear"></i>
-            </div>
-            
+
         </div>
         <nav>
             <ul class="nav-content2">
@@ -120,15 +122,8 @@
             </section>
         </div>
         <div class="center">
-            
-            <div class="nav-3">
-                <h4 onclick="notificationChange()">Trending</h4>
-                <h4 onclick="verifiedChange()">International</h4>
-                <h4 onclick="mentionChange()">Local</h4>
-            </div>
             <div id="all">
                 <div class="main">
-
                     <div class="content1">
                         <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
                             height="40px" alt="">
@@ -307,6 +302,7 @@
                 </div>
             </div>
         </div>
+
         <div class="right">
             <section class="section4">
                 <div class="section4-top">
@@ -358,11 +354,11 @@
         </div>
         <div class="mobile-footer">
             <a href="/frontend/main/index.html"><i class="fa-solid iconx fa-house"></i> </a>
-            <a href="/frontend/mobile/search/index.html"><i class="fa-solid iconx fa-magnifying-glass"></i></a>
-            <a href="/frontend/mobile/notification/index.html"><i class="fa-solid iconx fa-bell"></i></a>
+            <a href="/frontend//search/index.html"><i class="fa-solid iconx fa-magnifying-glass"></i></a>
+            <a href="/frontend/notification/index.html" ><i class="fa-solid iconx fa-bell"></i></a>
         </div>
 </body>
 <script src="/frontend/main/preview.js"></script>
-<script src="/frontend/main/sidebar.js"></script>
-<script src="/frontend/mobile/notification/nav.js"></script>
+    <script src="/frontend/main/sidebar.js"></script>
+    <script src="/frontend/mobile/notification/nav.js"></script>
 </html>

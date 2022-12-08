@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/143f4c7aad.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    
+    <script src="https://kit.fontawesome.com/143f4c7aad.js" crossorigin="anonymous"></script>
+
+   
 </head>
 
 <body>
@@ -15,8 +16,11 @@
         <div class="nav-test">
             <div class="notification">
                 <div class="name-nav">
-                    <h3>Akintola Tope</h3>
+                    <i class="fa-solid fa-arrow-left"></i>
                 </div>
+            </div>
+            <div class="main-nav">
+                <input class="search" type="text" name="" placeholder=" # Search" id="">
             </div>
             <nav class="nav-side">
                 <ul class="nav-content2">
@@ -43,9 +47,12 @@
                 <i class="fa-solid fa-arrow-left"></i>
             </div>
             <div class="main-nav">
-                <h4>Akintola Tope</h4>
+                <input class="search" type="text" name="" placeholder=" # Search" id="">
             </div>
-
+            <div class="name-nav">
+                <i onclick="closeSidebar()" class="fa-solid fa-gear"></i>
+            </div>
+            
         </div>
         <nav>
             <ul class="nav-content2">
@@ -113,32 +120,15 @@
             </section>
         </div>
         <div class="center">
-            <section class="profile">
-
-                <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="50px" alt="">
-                <h2>Akintola Tope</h2>
-                <p>@akintola</p>
-                <p>Private investigtor</p>
-                <div id="follow">
-                    <div id="follow1">
-                        <h3>7,000</h3>
-                        <p>Following</p>
-                    </div>
-                    <div id="follow2">
-                        <h3>7,000</h3>
-                        <p>Followers</p>
-                    </div>
-                </div>
             
-            </section>
             <div class="nav-3">
-                <h4 onclick="notificationChange()" >All</h4>
-                <h4 onclick="verifiedChange()">Replies</h4>
-                <h4 onclick="mentionChange()" >Saved</h4>
+                <h4 onclick="notificationChange()">Trending</h4>
+                <h4 onclick="verifiedChange()">International</h4>
+                <h4 onclick="mentionChange()">Local</h4>
             </div>
             <div id="all">
                 <div class="main">
-                    
+
                     <div class="content1">
                         <img class="profile-logo" src="https://pngimg.com/uploads/kfc/kfc_PNG20.png" width="40px"
                             height="40px" alt="">
@@ -158,8 +148,8 @@
                                         <p>@akintola</p>
                                     </div>
                                     <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                        data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 448 512" data-fa-i2svg="">
+                                        data-prefix="fas" data-icon="ellipsis" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
                                         <path fill="currentColor"
                                             d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
                                         </path>
@@ -167,10 +157,11 @@
                                 </div>
                                 <p>2 hours ago</p>
                             </div>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum
+                                voluptate
                                 dignissimos repudiandae, fugit, aperiam delectus</h4>
                         </div>
-    
+
                     </div>
                 </div>
                 <div class="main">
@@ -193,8 +184,8 @@
                                         <p>@akintola</p>
                                     </div>
                                     <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                        data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 448 512" data-fa-i2svg="">
+                                        data-prefix="fas" data-icon="ellipsis" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
                                         <path fill="currentColor"
                                             d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
                                         </path>
@@ -202,10 +193,11 @@
                                 </div>
                                 <p>2 hours ago</p>
                             </div>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum
+                                voluptate
                                 dignissimos repudiandae, fugit, aperiam delectus</h4>
                         </div>
-    
+
                     </div>
                 </div>
                 <div class="main">
@@ -228,8 +220,8 @@
                                         <p>@akintola</p>
                                     </div>
                                     <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                        data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 448 512" data-fa-i2svg="">
+                                        data-prefix="fas" data-icon="ellipsis" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
                                         <path fill="currentColor"
                                             d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
                                         </path>
@@ -237,10 +229,11 @@
                                 </div>
                                 <p>2 hours ago</p>
                             </div>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum
+                                voluptate
                                 dignissimos repudiandae, fugit, aperiam delectus</h4>
                         </div>
-    
+
                     </div>
                 </div>
             </div>
@@ -264,13 +257,14 @@
                                         <!-- <i class="fa-solid check fa-certificate"></i> Font Awesome fontawesome.com -->
                                         <p>@akintola</p>
                                     </div>
-                                        </div>
+                                </div>
                                 <p>2 hours ago</p>
                             </div>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum
+                                voluptate
                                 dignissimos repudiandae, fugit, aperiam delectus</h4>
                         </div>
-    
+
                     </div>
                 </div>
             </div>
@@ -295,8 +289,8 @@
                                         <p>@tester</p>
                                     </div>
                                     <svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false"
-                                        data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 448 512" data-fa-i2svg="">
+                                        data-prefix="fas" data-icon="ellipsis" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
                                         <path fill="currentColor"
                                             d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z">
                                         </path>
@@ -304,10 +298,11 @@
                                 </div>
                                 <p>2 hours ago</p>
                             </div>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum voluptate
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex culpa laborum
+                                voluptate
                                 dignissimos repudiandae, fugit, aperiam delectus</h4>
                         </div>
-    
+
                     </div>
                 </div>
             </div>
@@ -363,8 +358,8 @@
         </div>
         <div class="mobile-footer">
             <a href="/frontend/main/index.html"><i class="fa-solid iconx fa-house"></i> </a>
-            <a href="/frontend/mobile/search/index.html"><i class="fa-solid iconx fa-magnifying-glass"></i></a>
-            <a href="/frontend/mobile/notification/index.html" ><i class="fa-solid iconx fa-bell"></i></a>
+            <a href="/frontend//search/index.html"><i class="fa-solid iconx fa-magnifying-glass"></i></a>
+            <a href="/frontend/notification/index.html" ><i class="fa-solid iconx fa-bell"></i></a>
         </div>
 </body>
 <script src="/frontend/main/preview.js"></script>
